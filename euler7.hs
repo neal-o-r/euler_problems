@@ -12,3 +12,6 @@ primes = sieve [2..]
         sieve (p:xs) = p : sieve (filter (\x -> mod x p /= 0) xs)
 
 prime_n n = primes !! n
+
+main = do
+    print $ prime_n 10001
